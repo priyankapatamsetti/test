@@ -1,0 +1,18 @@
+<!-- <h1 class="test">{{test }}</h1> -->
+
+<h1 class="test">Today's date: {{ todaysdate | date }}</h1>
+<h1 class="test">Month end : {{ countDownDate | date }}</h1>
+
+<div *ngIf="totalDaysLeft === 1; else elseBlock">
+      <h1 class="test">Month ends in: {{totalDaysLeft}} Day Left</h1>
+</div>
+
+<ng-template #elseBlock>
+      <h1 class="test"> Month ends in: {{totalDaysLeft}} Days Left</h1>
+</ng-template>
+
+
+<!-- <h1 class="test">Month ends in: 
+            {{this.countDownDate.getDate() - this.todaysdate.getDate()}} days left
+</h1>  -->
+
